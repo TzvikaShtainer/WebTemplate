@@ -1,9 +1,8 @@
-import { useMemo } from "react";
 import reactLogo from "./assets/react.svg";
 import { firebaseApp } from "./firebase";
 
 function App() {
-  const statusText = useMemo(() => (firebaseApp ? "Firebase initialized" : "Firebase not initialized"), []);
+  const statusText = firebaseApp ? "Firebase initialized" : "Firebase not initialized";
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-center gap-6 bg-slate-950 px-6 text-slate-100">
